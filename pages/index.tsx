@@ -15,22 +15,8 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
-        <div className={styles.description}>
-          <p>
-            Try out our migration assistant!
-          </p>
-          <div>
-            <a
-              href="https://github.com/oslabs-beta/Caribu"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              By Team Caribu
-            </a>
-          </div>
-        </div>
 
+      <main className={styles.main}>
         <div className={styles.center}>
           <Image
             className={styles.logo}
@@ -43,14 +29,13 @@ export default function Home() {
         </div>
 
         <div className={styles.info}>
-        <p>
-          Migration like the majestic Caribu.
+        <p><i>
+          Microservice Migration Simplified
+        </i>
           </p>
+          <br/><br/>
           <p>
-          Like the majestic Caribu, our application is migratory.
-          </p>
-          <p>
-          Caribu is a tool for assisting with migration of an application from a monolithic architecture to a microservice based architecture.
+          Caribu is a microservice migration planning tool for Express.js that assists you in analyzing your monolithic architecture by parsing your server's routes and middleware to identifying ready-to-migrate clusters.
           </p>
         </div>
 
