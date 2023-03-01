@@ -5,6 +5,7 @@
   align-items: center;
   padding: 6rem;
   min-height: 100vh;
+  background-color: #025959;
 }
 
 .description {
@@ -49,9 +50,18 @@
   text-align: center;
 }
 
+.blurb {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 50px;
+  max-width: 90%;
+  text-align: center;
+}
+
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(25%, auto));
+  grid-template-columns: repeat(3, minmax(33%, auto));
   width: var(--max-width);
   max-width: 100%;
 }
@@ -79,7 +89,7 @@
   opacity: 0.6;
   font-size: 0.9rem;
   line-height: 1.5;
-  max-width: 30ch;
+  max-width: 20ch;
 }
 
 .center {
@@ -87,7 +97,7 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  padding: 4rem 0;
+  padding: 2rem 0;
 }
 
 .center::before {
@@ -157,6 +167,10 @@
     rgba(var(--tile-end-rgb), 1)
   );
   background-clip: content-box;
+}
+
+.tagline {
+  color: #05AEAE;
 }
 
 /* Enable hover only on non-touch devices */
