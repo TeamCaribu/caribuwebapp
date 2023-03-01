@@ -20,7 +20,7 @@ export default function Home() {
         <div className={styles.center}>
           <Image
             className={styles.logo}
-            src="/CaribuLogo.png"
+            src="/white_logo.svg"
             alt="Caribu Logo"
             width={720}
             height={240}
@@ -40,7 +40,7 @@ export default function Home() {
         </div>
 
         <div className={styles.grid}>
-          <Link
+          {/* <Link
             href="/documentation"
             className={styles.card}
             target="_blank"
@@ -52,7 +52,7 @@ export default function Home() {
             <p className={inter.className}>
               Get started with Caribu
             </p>
-          </Link>
+          </Link> */}
 
           <a
             href="https://github.com/oslabs-beta/Caribu"
@@ -64,7 +64,7 @@ export default function Home() {
               Github <span>-&gt;</span>
             </h2>
             <p className={inter.className}>
-              Checkout our Github
+              Check out our repo
             </p>
           </a>
 
@@ -78,7 +78,7 @@ export default function Home() {
               Download <span>-&gt;</span>
             </h2>
             <p className={inter.className}>
-              Download our app and try it out for yourself
+              Try the app out for yourself
             </p>
           </a>
 
@@ -91,6 +91,9 @@ export default function Home() {
             <h2 className={inter.className}>
               About us <span>-&gt;</span>
             </h2>
+            <p className={inter.className}>
+              Meet the developers
+            </p>
           </Link>
 
         </div>
