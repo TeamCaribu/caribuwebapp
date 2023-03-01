@@ -15,8 +15,8 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(3),
   },
   image: {
-    height: "80%",
-    width: "80%",
+    height: "60%",
+    width: "60%",
     objectFit: "cover",
   },
 }));
@@ -75,11 +75,9 @@ function AboutPage() {
             Github
             </Link>
             <br></br>
-            <Link href={member.github}>
+            <Link href={member.linkedIn}>
             LinkedIn
             </Link>
-            <Typography>Github</Typography>
-            <Typography>LinkedIn</Typography>
             </div>
           </Grid>
         ))}
