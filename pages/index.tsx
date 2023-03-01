@@ -29,15 +29,17 @@ export default function Home() {
         </div>
 
         <div className={styles.info}>
-        <p><i>
+        <p><i style={{ color: '#05C7C7' }}>
           Microservice Migration Simplified
         </i>
           </p>
-          <br/><br/>
-          <p>
-          Caribu is a microservice migration planning tool for Express.js that assists you in analyzing your monolithic architecture by parsing your server's routes and middleware to identifying ready-to-migrate clusters.
-          </p>
         </div>
+          <br/><br/>
+          <div>
+            <p className={styles.blurb}>
+            Caribu is a microservice migration planning tool for Express.js that assists you in analyzing your monolithic architecture by parsing your server's routes and middleware to identifying ready-to-migrate clusters.
+            </p>
+          </div>
 
         <div className={styles.grid}>
           {/* <Link
