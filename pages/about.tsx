@@ -3,29 +3,31 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import React from "react";
-import { Grid, Typography } from "@material-ui/core";
-import Link from '@material-ui/core/Link';
-import { makeStyles } from "@material-ui/core/styles";
+import Box from '@mui/material/Box';
+import Paper from '@mui/material/Paper';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
+import Link from '@mui/material/Link';
 
 const inter = Inter({ subsets: ['latin'] })
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-    padding: theme.spacing(3),
-  },
-  image: {
-    height: "60%",
-    width: "60%",
-    objectFit: "cover",
-  },
-  link: {
-    color: "#F2C12E",
-    '&:hover': {
-      color: '#74FBFB',
-    },
-  },
-}));
+// const useStyles = makeStyles((theme) => ({
+//   root: {
+//     flexGrow: 1,
+//     padding: theme.spacing(3),
+//   },
+//   image: {
+//     height: "60%",
+//     width: "60%",
+//     objectFit: "cover",
+//   },
+//   link: {
+//     color: "#F2C12E",
+//     '&:hover': {
+//       color: '#74FBFB',
+//     },
+//   },
+// }));
 
 const teamMembers = [
   {
@@ -68,7 +70,6 @@ const teamMembers = [
 
 
 function AboutPage() {
-  const classes = useStyles();
 
   return (
     <div className={styles.main}>
@@ -84,11 +85,11 @@ function AboutPage() {
             <div style={{textAlign: "center", marginTop: "10px"}}>
               <Typography variant="h5">{member.name}</Typography>
               <div style={{textAlign: "center", fontFamily: "Helvetica"}}>
-                <Link className={classes.link} href={member.github} style={{textDecoration: 'none'}}>
+                <Link className={'link'} href={member.github} style={{textDecoration: 'none'}}>
                 Github
                 </Link>
                 <br></br>
-                <Link className={classes.link} href={member.linkedIn} style={{textDecoration: 'none'}}>
+                <Link className={'link'} href={member.linkedIn} style={{textDecoration: 'none'}}>
                 LinkedIn
                 </Link>
               </div>
