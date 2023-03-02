@@ -300,8 +300,15 @@
   }
 }
 
-.headshot-image {
+.image {
   height: "60%";
   width: "60%";
   object-fit: "cover";
+}
+
+.link {
+  color: "#F2C12E";
+}
+link:hover {
+  color: '#74FBFB';
 }
