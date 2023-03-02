@@ -54,7 +54,7 @@
   font-family: Helvetica, Arial, sans-serif;
   font-weight: 600;
   font-size: 20px;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
   max-width: 90%;
   text-align: center;
 }
@@ -130,6 +130,7 @@
 .logo,
 .thirteen {
   position: relative;
+  max-width: 80vw
 }
 
 .thirteen {
@@ -204,6 +205,22 @@
 @media (max-width: 700px) {
   .content {
     padding: 4rem;
+  }
+
+  .center {
+    padding: 3% !important;
+  }
+
+  .info {
+    min-width : 80% !important
+  }
+
+  .main body {
+    width : 95vw
+  }
+  .main {
+    width : 100vw;
+    padding : 10%
   }
 
   .grid {
