@@ -80,7 +80,7 @@ function AboutPage() {
         {teamMembers.map((member) => (
           <Grid item xs={12} sm={6} md={4} key={member.name}>
             <div style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
-              <img src={member.imageSrc} alt={member.name} className={classes.image} />
+              <img src={member.imageSrc} alt={member.name} className={'headshot-image'} />
             </div>
             <div style={{textAlign: "center", marginTop: "10px"}}>
               <Typography variant="h5">{member.name}</Typography>
