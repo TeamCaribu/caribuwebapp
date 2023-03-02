@@ -7,6 +7,7 @@ import { User } from "@nextui-org/react";
 import { Card } from '@nextui-org/react';
 import { Avatar, Grid } from "@nextui-org/react";
 import { Button } from "@nextui-org/react";
+import { JsxElement } from 'typescript';
 
 
 
@@ -46,7 +47,7 @@ const teamMembers = [
 ];
 
 
-function ProfileCard (props) {
+function ProfileCard (props: any) {
   const {name, github, linkedIn, imageSrc} = props
   return (
     <Card className={styles.profileCard} isHoverable>
@@ -80,7 +81,7 @@ function ProfileCard (props) {
 
 function AboutPage() {
   // const classes = useStyles();
-  let listOfPeople = []
+  let listOfPeople: any = []
 
   teamMembers.forEach(member => {
     listOfPeople.push(<ProfileCard name={member.name} github={member.github} imageSrc={member.imageSrc} linkedIn={member.linkedIn}></ProfileCard>)

@@ -24,7 +24,7 @@ export default function Home() {
             alt="Caribu Logo"
             width={720}
             height={240}
-            maxWidth={'90vw'}
+            sizes="max-width: 90vw"
             priority
           />
         </div>
