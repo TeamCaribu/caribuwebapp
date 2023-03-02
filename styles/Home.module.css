@@ -299,3 +299,7 @@
     transform: rotate(0deg);
   }
 }
+
+.headshot-image {
+  width: 200px;
+}
