@@ -301,5 +301,7 @@
 }
 
 .headshot-image {
-  width: 200px;
+  height: "60%";
+  width: "60%";
+  object-fit: "cover";
 }
