@@ -73,7 +73,7 @@ function AboutPage() {
   return (
     <div className={styles.main}>
       <Typography variant="h3" style={{marginBottom: "30px", color: "#74FBFB"}}>
-        About the Team
+        The Caribu Team
       </Typography>
       <Grid container spacing={4}>
         {teamMembers.map((member) => (
