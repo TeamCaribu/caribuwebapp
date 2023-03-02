@@ -3,29 +3,8 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import React from "react";
-import { Grid, Typography } from "@material-ui/core";
-import Link from '@material-ui/core/Link';
-import { makeStyles } from "@material-ui/core/styles";
 
 const inter = Inter({ subsets: ['latin'] })
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-    padding: theme.spacing(3),
-  },
-  image: {
-    height: "60%",
-    width: "60%",
-    objectFit: "cover",
-  },
-  link: {
-    color: "#F2C12E",
-    '&:hover': {
-      color: '#74FBFB',
-    },
-  },
-}));
 
 const teamMembers = [
   {
@@ -58,44 +37,38 @@ const teamMembers = [
     linkedIn: "https://www.linkedin.com/in/jordancepeda/",
     imageSrc: "jordan-circle.png",
   },
-  {
-    name: "Ducky",
-    github: "https://duckduckgo.com/",
-    linkedIn: "https://www.youtube.com/watch?v=Mh85R-S-dh8",
-    imageSrc: "ducky-circle.png"
-  }
 ];
 
 
 function AboutPage() {
-  const classes = useStyles();
+  // const classes = useStyles();
 
   return (
-    <div className={styles.main}>
-      <Typography variant="h3" style={{marginBottom: "30px", color: "#74FBFB"}}>
+    <div className={styles.aboutMain}>
+      <h3 style={{fontSize: "2.5em", marginBottom: "30px", color: "#f2eddf"}}>
         The Caribu Team
-      </Typography>
-      <Grid container spacing={4}>
+      </h3>
+      <div className={styles.gridOuter}>
         {teamMembers.map((member) => (
-          <Grid item xs={12} sm={6} md={4} key={member.name}>
+          <div className="grid-inner" key={member.name}>
             <div style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
-              <img src={member.imageSrc} alt={member.name} className={classes.image} />
+              <img src={member.imageSrc} alt={member.name} style={{height: "18vw", width: "18vw", margin: "0 1vw"}} />
             </div>
             <div style={{textAlign: "center", marginTop: "10px"}}>
-              <Typography variant="h5">{member.name}</Typography>
+              <h5 style={{fontSize: "2em"}}>{member.name}</h5>
               <div style={{textAlign: "center", fontFamily: "Helvetica"}}>
-                <Link className={classes.link} href={member.github} style={{textDecoration: 'none'}}>
+                <a className={styles.link} href={member.github}>
                 Github
-                </Link>
+                </a>
                 <br></br>
-                <Link className={classes.link} href={member.linkedIn} style={{textDecoration: 'none'}}>
+                <a className={styles.link} href={member.linkedIn}>
                 LinkedIn
-                </Link>
+                </a>
               </div>
             </div>
-          </Grid>
+          </div>
         ))}
-      </Grid>
+      </div>
     </div>
   );
 }
