@@ -35,7 +35,7 @@ export default function Home() {
           </p>
         </div>
           <br/><br/>
-          <div>
+          <div style={{display : 'flex', alignItems : 'center', justifyContent : 'center'}}>
             <p className={styles.blurb}>
             Caribu is a microservice migration planning tool for Express.js that assists you in analyzing your monolithic architecture by parsing your server's routes and middleware to identifying ready-to-migrate clusters.
             </p>
