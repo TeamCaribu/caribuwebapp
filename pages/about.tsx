@@ -7,7 +7,6 @@ import { User } from "@nextui-org/react";
 import { Card } from '@nextui-org/react';
 import { Avatar, Grid } from "@nextui-org/react";
 import { Button } from "@nextui-org/react";
-import { NextLink } from 'next/link'
 
 
 
