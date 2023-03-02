@@ -54,7 +54,7 @@
   font-family: Helvetica, Arial, sans-serif;
   font-weight: 600;
   font-size: 20px;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
   max-width: 90%;
   text-align: center;
 }
@@ -72,6 +72,10 @@
   border-radius: var(--border-radius);
   background: rgba(var(--card-rgb), 0);
   border: 1px solid rgba(var(--card-border-rgb), 0);
+  display: flex;
+  flex-direction: column;
+  align-items : center;
+  justify-content : center;
   transition: background 200ms, border 200ms;
 }
 
@@ -90,7 +94,7 @@
   opacity: 0.6;
   font-size: 0.9rem;
   line-height: 1.5;
-  max-width: 20ch;
+  max-width: 40ch;
 }
 
 .center {
@@ -126,6 +130,7 @@
 .logo,
 .thirteen {
   position: relative;
+  max-width: 80vw
 }
 
 .thirteen {
@@ -200,6 +205,22 @@
 @media (max-width: 700px) {
   .content {
     padding: 4rem;
+  }
+
+  .center {
+    padding: 3% !important;
+  }
+
+  .info {
+    min-width : 80% !important
+  }
+
+  .main body {
+    width : 95vw
+  }
+  .main {
+    width : 100vw;
+    padding : 10%
   }
 
   .grid {
@@ -305,7 +326,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 6rem;
+  padding: 2rem;
   min-height: 100vh;
   background-color: #025959;
   font-family: Helvetica, Arial, sans-serif;
@@ -332,4 +353,23 @@
 
 .link:hover {
   color: #74fbfb;
+}
+
+.profileCard {
+  border-radius : 15px;
+  padding: 10px !important; 
+  display : flex; 
+  flex-direction : column; 
+  width : 18%;
+  /* min-width : 20vw;  */
+  text-align : center; 
+  justify-content : center; 
+  align-items : center; 
+  background-color : #F2EDDF; 
+  color : #255858;
+  border-color : #025959;
+  border-style : solid;
+  border-width : 2px;
+  box-shadow : 2px 2px 20px 1px #012940;
+  margin : 10px !important
 }

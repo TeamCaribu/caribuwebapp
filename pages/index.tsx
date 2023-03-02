@@ -24,6 +24,7 @@ export default function Home() {
             alt="Caribu Logo"
             width={720}
             height={240}
+            sizes="max-width: 90vw"
             priority
           />
         </div>
@@ -35,10 +36,17 @@ export default function Home() {
           </p>
         </div>
           <br/><br/>
-          <div>
+          <div style={{display : 'flex', alignItems : 'center', justifyContent : 'center'}}>
             <p className={styles.blurb}>
             Caribu is a microservice migration planning tool for Express.js that assists you in analyzing your monolithic architecture by parsing your server's routes and middleware to identifying ready-to-migrate clusters.
             </p>
+            <br></br>
+          </div>
+          <div style={{display : 'flex', alignItems : 'center', justifyContent : 'center', marginTop : '10px', marginBottom : '50px'}}>
+              <p style={{fontSize : 'small', fontFamily : 'Helvetica, Arial, sans-serif', textAlign : 'center'}}> 
+              Note: If you cannot run our application. Run <i><b>sudo xattr -r -d com.apple.quarantine '/Applications/Caribu.app'</b></i> in your terminal
+              </p>
+            <br></br>
           </div>
 
         <div className={styles.grid}>
@@ -87,7 +95,7 @@ export default function Home() {
           <Link
             href="/about"
             className={styles.card}
-            target="_blank"
+            // target="_blank"
             rel="noopener noreferrer"
           >
             <h2 className={inter.className}>

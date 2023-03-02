@@ -3,6 +3,13 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import React from "react";
+import { User } from "@nextui-org/react";
+import { Card } from '@nextui-org/react';
+import { Avatar, Grid } from "@nextui-org/react";
+import { Button } from "@nextui-org/react";
+import { JsxElement } from 'typescript';
+
+
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -40,16 +47,53 @@ const teamMembers = [
 ];
 
 
+function ProfileCard (props: any) {
+  const {name, github, linkedIn, imageSrc} = props
+  return (
+    <Card className={styles.profileCard} isHoverable>
+        <Card style={{padding : '10px', backgroundColor : 'rgba(255,255,255,0)'}}>
+          <Card.Image
+          src={imageSrc}
+          > 
+          </Card.Image>
+        </Card>
+        <div>
+          <b>{name}</b>
+          <br></br>
+          <i>Software Engineer</i>
+        </div>
+        <br></br>
+        <Button auto ghost 
+          onClick={() => {window.open(github, '_blank')}}
+          style={{margin : '5px', width : '100%', maxWidth : '100%'}}>
+          Github
+        </Button>
+        <Button 
+          auto 
+          ghost
+          onClick={() => {window.open(linkedIn, '_blank')}}
+          style={{margin : '5px', width : '100%'}}>
+          LinkedIn
+        </Button>
+      </Card>
+  )
+}
+
 function AboutPage() {
   // const classes = useStyles();
+  let listOfPeople: any = []
 
+  teamMembers.forEach(member => {
+    listOfPeople.push(<ProfileCard name={member.name} github={member.github} imageSrc={member.imageSrc} linkedIn={member.linkedIn}></ProfileCard>)
+  })
   return (
     <div className={styles.aboutMain}>
-      <h3 style={{fontSize: "2.5em", marginBottom: "30px", color: "#f2eddf"}}>
+      <h3 style={{fontSize: "2.5em", marginBottom: "30px", color: "#f2eddf", textAlign  : 'center'}}>
         The Caribu Team
       </h3>
       <div className={styles.gridOuter}>
-        {teamMembers.map((member) => (
+        {listOfPeople}
+        {/* {teamMembers.map((member) => (
           <div className="grid-inner" key={member.name}>
             <div style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
               <img src={member.imageSrc} alt={member.name} style={{height: "18vw", width: "18vw", margin: "0 1vw"}} />
@@ -67,7 +111,7 @@ function AboutPage() {
               </div>
             </div>
           </div>
-        ))}
+        ))} */}
       </div>
     </div>
   );
