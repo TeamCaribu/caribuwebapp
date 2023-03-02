@@ -3,31 +3,29 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import React from "react";
-import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
-import Grid from '@mui/material/Grid';
-import Typography from '@mui/material/Typography';
-import Link from '@mui/material/Link';
+import { Grid, Typography } from "@material-ui/core";
+import Link from '@material-ui/core/Link';
+import { makeStyles } from "@material-ui/core/styles";
 
 const inter = Inter({ subsets: ['latin'] })
 
-// const useStyles = makeStyles((theme) => ({
-//   root: {
-//     flexGrow: 1,
-//     padding: theme.spacing(3),
-//   },
-//   image: {
-//     height: "60%",
-//     width: "60%",
-//     objectFit: "cover",
-//   },
-//   link: {
-//     color: "#F2C12E",
-//     '&:hover': {
-//       color: '#74FBFB',
-//     },
-//   },
-// }));
+const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+    padding: theme.spacing(3),
+  },
+  image: {
+    height: "60%",
+    width: "60%",
+    objectFit: "cover",
+  },
+  link: {
+    color: "#F2C12E",
+    '&:hover': {
+      color: '#74FBFB',
+    },
+  },
+}));
 
 const teamMembers = [
   {
@@ -70,6 +68,7 @@ const teamMembers = [
 
 
 function AboutPage() {
+  const classes = useStyles();
 
   return (
     <div className={styles.main}>
@@ -80,16 +79,16 @@ function AboutPage() {
         {teamMembers.map((member) => (
           <Grid item xs={12} sm={6} md={4} key={member.name}>
             <div style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
-              <img src={member.imageSrc} alt={member.name} className='image' />
+              <img src={member.imageSrc} alt={member.name} className={classes.image} />
             </div>
             <div style={{textAlign: "center", marginTop: "10px"}}>
               <Typography variant="h5">{member.name}</Typography>
               <div style={{textAlign: "center", fontFamily: "Helvetica"}}>
-                <Link className={'link'} href={member.github} style={{textDecoration: 'none'}}>
+                <Link className={classes.link} href={member.github} style={{textDecoration: 'none'}}>
                 Github
                 </Link>
                 <br></br>
-                <Link className={'link'} href={member.linkedIn} style={{textDecoration: 'none'}}>
+                <Link className={classes.link} href={member.linkedIn} style={{textDecoration: 'none'}}>
                 LinkedIn
                 </Link>
               </div>
