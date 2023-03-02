@@ -19,6 +19,12 @@ const useStyles = makeStyles((theme) => ({
     width: "60%",
     objectFit: "cover",
   },
+  link: {
+    color: "#F2C12E",
+    '&:hover': {
+      color: '#74FBFB',
+    },
+  },
 }));
 
 const teamMembers = [
@@ -52,6 +58,12 @@ const teamMembers = [
     linkedIn: "https://www.linkedin.com/in/jordancepeda/",
     imageSrc: "jordan-circle.png",
   },
+  {
+    name: "Ducky",
+    github: "https://duckduckgo.com/",
+    linkedIn: "https://www.youtube.com/watch?v=Mh85R-S-dh8",
+    imageSrc: "ducky-circle.png"
+  }
 ];
 
 
@@ -60,24 +72,26 @@ function AboutPage() {
 
   return (
     <div className={styles.main}>
-      <Typography variant="h3" style={{marginBottom: "50px"}}>
-        About the Team
+      <Typography variant="h3" style={{marginBottom: "30px", color: "#74FBFB"}}>
+        The Caribu Team
       </Typography>
       <Grid container spacing={4}>
         {teamMembers.map((member) => (
           <Grid item xs={12} sm={6} md={4} key={member.name}>
             <div style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
-            <img src={member.imageSrc} alt={member.name} className={classes.image} />
+              <img src={member.imageSrc} alt={member.name} className={classes.image} />
             </div>
-            <div style={{textAlign: "center", marginTop: "15px"}}>
-            <Typography variant="h5">{member.name}</Typography>
-            <Link href={member.github}>
-            Github
-            </Link>
-            <br></br>
-            <Link href={member.linkedIn}>
-            LinkedIn
-            </Link>
+            <div style={{textAlign: "center", marginTop: "10px"}}>
+              <Typography variant="h5">{member.name}</Typography>
+              <div style={{textAlign: "center", fontFamily: "Helvetica"}}>
+                <Link className={classes.link} href={member.github} style={{textDecoration: 'none'}}>
+                Github
+                </Link>
+                <br></br>
+                <Link className={classes.link} href={member.linkedIn} style={{textDecoration: 'none'}}>
+                LinkedIn
+                </Link>
+              </div>
             </div>
           </Grid>
         ))}
